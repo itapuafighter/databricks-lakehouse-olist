@@ -5,6 +5,9 @@ Brazilian E-Commerce Public Dataset by Olist (100,000 real orders).
 
 ## Architecture
 
+See [detailed architecture](notebooks/architecture.md) for the full pipeline diagram.
+
+
 Raw CSV Files → Bronze (Delta Lake) → Silver (PySpark) → Gold (Aggregations) → ML (MLflow) → GenAI (Hugging Face)
 
 ## What this project covers
