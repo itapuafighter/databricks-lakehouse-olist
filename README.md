@@ -8,7 +8,7 @@ Brazilian E-Commerce Public Dataset by Olist (100,000 real orders).
 See [detailed architecture](notebooks/architecture.md) for the full pipeline diagram.
 
 
-Raw CSV Files → Bronze (Delta Lake) → Silver (PySpark) → Gold (Aggregations) → ML (MLflow) → GenAI (Hugging Face)
+Raw CSV Files → Bronze (Delta Lake) → Silver (PySpark) → Gold (Aggregations) → ML (MLflow) → GenAI (Hugging Face) → Streaming (Auto Loader)
 
 ## What this project covers
 
@@ -17,6 +17,7 @@ Raw CSV Files → Bronze (Delta Lake) → Silver (PySpark) → Gold (Aggregation
 - **Gold layer** — 4 business-ready aggregation tables covering sales by category, delivery performance, payment analysis, and customer satisfaction
 - **ML layer** — Random Forest model predicting customer review scores (1-5), with experiment tracking and model versioning using MLflow
 - **GenAI layer** — multilingual sentiment analysis on Portuguese customer reviews using a Hugging Face BERT model, results saved back to Delta Lake
+- **Streaming layer** — simulated real-time order ingestion using Databricks Auto Loader and Structured Streaming, processing JSON batches into Delta Lake as they arrive
 
 ## Key findings
 
